@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: portfolio-laravel
+    env: php
+    buildCommand: ./build.sh
+    startCommand: heroku-php-apache2 public/

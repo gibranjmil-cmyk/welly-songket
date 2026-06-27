@@ -1,0 +1,28 @@
+{
+    "name": "welly-songket/welly-songket",
+    "description": "Website dan CMS Welly Songket menggunakan PHP Native.",
+    "type": "project",
+    "license": "MIT",
+    "keywords": [
+        "welly-songket",
+        "php",
+        "cms",
+        "pre-order",
+        "songket"
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "WellySongket\\": "app/"
+        },
+        "files": [
+            "app/Helpers/helpers.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

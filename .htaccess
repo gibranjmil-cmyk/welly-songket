@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Jika sudah ada /public/ dalam URL, jangan redirect lagi
+RewriteCond %{REQUEST_URI} ^/[^/]+/public/ [NC]
+RewriteRule ^ - [L]
+
+# Jika request ke file/folder nyata di public/, serve langsung
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+
+# Semua request lain → arahkan ke public/index.php
+RewriteCond %{REQUEST_URI} !^/[^/]+/public/
+RewriteRule ^(.*)$ public/$1 [L]

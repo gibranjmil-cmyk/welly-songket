@@ -1,0 +1,167 @@
+/*
+ * Welly Songket — Admin Auth Screen
+ * Split layout: dark brand panel (left) + login card (right).
+ * Depends on theme.css tokens being loaded first.
+ */
+
+.ws-auth-shell {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+@media (max-width: 991.98px) {
+    .ws-auth-shell {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ws-auth-brand {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--ws-space-6) var(--ws-space-5);
+    background: var(--ws-black);
+    color: var(--ws-white);
+    overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    .ws-auth-brand {
+        display: flex;
+    }
+}
+
+/* Abstract woven-lattice pattern, drawn with pure CSS gradients.
+   Evokes songket's diagonal weave without reproducing any
+   specific real motif artwork. */
+.ws-auth-brand::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.16;
+    background-image:
+        repeating-linear-gradient(45deg, var(--ws-gold) 0, var(--ws-gold) 1px, transparent 1px, transparent 28px),
+        repeating-linear-gradient(-45deg, var(--ws-gold) 0, var(--ws-gold) 1px, transparent 1px, transparent 28px);
+}
+
+.ws-auth-brand::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: var(--ws-gold);
+}
+
+.ws-auth-brand-top,
+.ws-auth-brand-bottom {
+    position: relative;
+    z-index: 1;
+}
+
+.ws-auth-wordmark {
+    font-family: var(--ws-font-serif);
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--ws-white);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--ws-space-1);
+}
+
+.ws-auth-wordmark small {
+    font-family: var(--ws-font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ws-gold);
+}
+
+.ws-auth-tagline {
+    max-width: 360px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.78);
+    margin-top: var(--ws-space-3);
+}
+
+.ws-auth-brand-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--ws-space-2);
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ws-auth-form-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--ws-space-3);
+    background: var(--ws-white);
+}
+
+.ws-auth-card {
+    width: 100%;
+    max-width: 380px;
+    padding: var(--ws-space-2) 0;
+}
+
+.ws-auth-mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--ws-space-1);
+    margin-bottom: var(--ws-space-4);
+    font-family: var(--ws-font-serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ws-black);
+    text-decoration: none;
+}
+
+@media (min-width: 992px) {
+    .ws-auth-mobile-brand {
+        display: none;
+    }
+}
+
+.ws-auth-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: var(--ws-space-1);
+}
+
+.ws-auth-card .ws-auth-intro {
+    color: var(--ws-muted);
+    margin-bottom: var(--ws-space-4);
+}
+
+.ws-password-toggle {
+    border-left: 0;
+}
+
+.ws-auth-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: var(--ws-space-4);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--ws-muted);
+    text-decoration: none;
+}
+
+.ws-auth-back:hover {
+    color: var(--ws-red);
+}
+
+.ws-auth-footer-note {
+    margin-top: var(--ws-space-6);
+    font-size: 0.75rem;
+    color: var(--ws-muted);
+}

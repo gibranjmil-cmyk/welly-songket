@@ -1,0 +1,62 @@
+{
+    "products": [
+        {
+            "id": "selendang",
+            "name": "Selendang",
+            "category": "kain",
+            "description": "Preorder selendang songket dengan motif dan ukuran sesuai pesanan."
+        },
+        {
+            "id": "tas",
+            "name": "Tas",
+            "category": "aksesoris_cm",
+            "description": "Tas songket custom dengan ukuran dalam cm."
+        },
+        {
+            "id": "dompet",
+            "name": "Dompet",
+            "category": "aksesoris_cm",
+            "description": "Dompet songket custom dengan ukuran dalam cm."
+        },
+        {
+            "id": "sepatu",
+            "name": "Sepatu",
+            "category": "alas_kaki",
+            "description": "Sepatu songket preorder sesuai ukuran kaki."
+        },
+        {
+            "id": "sandal",
+            "name": "Sandal",
+            "category": "alas_kaki",
+            "description": "Sandal songket preorder sesuai ukuran kaki."
+        },
+        {
+            "id": "baju-kurung",
+            "name": "Baju Kurung",
+            "category": "pakaian",
+            "description": "Baju kurung songket custom agar fit di badan customer."
+        },
+        {
+            "id": "baju-basiba",
+            "name": "Baju Basiba",
+            "category": "pakaian",
+            "description": "Baju basiba songket custom sesuai ukuran badan."
+        },
+        {
+            "id": "kemeja",
+            "name": "Kemeja",
+            "category": "pakaian",
+            "description": "Kemeja songket custom sesuai ukuran badan."
+        }
+    ],
+    "motifs": [
+        {
+            "id": "pucuk-rabuang",
+            "name": "Pucuk Rabuang",
+            "description": "Motif khas Pandai Sikek yang menjadi pilihan utama, namun customer tetap bebas memilih motif lain."
+        }
+    ],
+    "product_media": [],
+    "motif_media": [],
+    "videos": []
+}
